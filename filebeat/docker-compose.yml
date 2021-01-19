@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  filebeat:
+    build: .
+    image: filebeat:7.8.0
+    container_name: filebeat
+    volumes:
+      - "./filebeat.yml:/usr/share/filebeat/filebeat.yml"
+      - "/home/docker/Proxy_Nginx/logs:/logs"

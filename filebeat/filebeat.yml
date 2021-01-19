@@ -1,0 +1,28 @@
+filebeat.inputs:
+- type: log
+  input_type: log
+  paths:
+    - /logs/*.log
+  tags: ["nginx"]
+  fields:
+    type: log
+    case: test
+  fields_under_root: true
+  tail_files: false
+
+output.logstash:
+  hosts: ["172.16.82.104:5000"]
+
+#output.elasticsearch:
+#  hosts: ["172.16.82.104:9200"]
+#  index: "test-nginx-%{+yyyy.MM.dd}"
+
+setup.template:
+  name: "nginx"
+  pattern: "nginx-*"
+  enabled: false
+
+multiline:
+  pattern: '^[0-9]{4}-[0-9]{2}-[0-9]{2}'
+  negate: "true"
+  match: "after"
