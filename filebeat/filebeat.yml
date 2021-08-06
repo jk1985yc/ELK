@@ -2,11 +2,20 @@ filebeat.inputs:
 - type: log
   input_type: log
   paths:
-    - /logs/*.log
-  tags: ["nginx"]
+    - /logs/api/*.log
+  tags: ["OpenAPI"]
   fields:
-    type: log
-    case: test
+    type: dev_api
+  fields_under_root: true
+  tail_files: false
+
+- type: log
+  input_type: log
+  paths:
+    - /logs/nginx/*.log
+  tags: ["Nginx"]
+  fields:
+    type: dev_nginx
   fields_under_root: true
   tail_files: false
 
