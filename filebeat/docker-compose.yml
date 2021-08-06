@@ -7,4 +7,5 @@ services:
     container_name: filebeat
     volumes:
       - "./filebeat.yml:/usr/share/filebeat/filebeat.yml"
-      - "/home/docker/Proxy_Nginx/logs:/logs"
+      #- "/home/docker/Proxy_Nginx/logs:/logs"
+      - "/home/docker/Official/logs:/logs"

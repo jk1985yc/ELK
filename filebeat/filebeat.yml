@@ -11,7 +11,7 @@ filebeat.inputs:
   tail_files: false
 
 output.logstash:
-  hosts: ["172.16.82.104:5000"]
+  hosts: ["10.2.1.101:5000"]
 
 #output.elasticsearch:
 #  hosts: ["172.16.82.104:9200"]
