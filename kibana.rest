@@ -1,20 +1,26 @@
 ### Create Index Patterns
-@ID = dev-2021.10.*
+@ID = My-Patterns-*
+@IP = 127.0.0.1
+@PORT = 5601
+
 POST /api/saved_objects/index-pattern/{{ID}} HTTP/1.1
-Host: 10.2.1.103:5601
+Host: {{IP}}:{{PORT}}
 kbn-xsrf: true
 Content-Type: application/json
 
 {
   "attributes":
   {
-    "title": "dev-2021.12.*"
+    "title": "{{ID}}"
   }
 }
 
 
 ### Delete Index Patterns
-@ID = dev-2021.10.*
+@ID = My-Patterns-*
+@IP = 127.0.0.1
+@PORT = 5601
+
 DELETE /api/saved_objects/index-pattern/{{ID}} HTTP/1.1
-Host: 10.2.1.103:5601
+Host: {{IP}}:{{PORT}}
 kbn-xsrf: true
