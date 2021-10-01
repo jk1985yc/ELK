@@ -1,8 +1,8 @@
-@IP = 10.2.1.103
+@IP = 127.0.0.1
 @PORT = 5601
 
 ### Create Index Patterns
-@ID_1 = dev-2021.11.*
+@ID_1 = My-Patterns-*
 
 POST /api/saved_objects/index-pattern/{{ID_1}} HTTP/1.1
 Host: {{IP}}:{{PORT}}
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Delete Index Patterns
-@ID_2 = dev-2021.10.*
+@ID_2 = My-Patterns-*
 
 DELETE /api/saved_objects/index-pattern/{{ID}} HTTP/1.1
 Host: {{IP}}:{{PORT}}
