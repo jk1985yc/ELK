@@ -11,7 +11,8 @@ Content-Type: application/json
 {
   "attributes":
   {
-    "title": "{{ID}}"
+    "title": "{{ID}}",
+    "timeFieldName" : "@timestamp"
   }
 }
 
