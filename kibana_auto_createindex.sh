@@ -13,7 +13,8 @@ then
   curl -X POST "${IP}:${PORT}/api/saved_objects/index-pattern/${ID}" -H 'kbn-xsrf: true' -H 'Content-Type: application/json' -d'
     {
       "attributes": {
-        "title": "'${ID}'"
+        "title": "'${ID}'"，
+        "timeFieldName" : "@timestamp"
       }
     }'
 
