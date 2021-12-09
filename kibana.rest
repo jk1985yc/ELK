@@ -2,6 +2,7 @@
 @PORT = 5601
 
 ### Create Index Patterns
+
 @ID_1 = My-Patterns-*
 
 POST /api/saved_objects/index-pattern/{{ID_1}} HTTP/1.1
@@ -18,6 +19,7 @@ Content-Type: application/json
 }
 
 ### Set Default Index
+
 POST /api/kibana/settings/defaultIndex HTTP/1.1
 Host: {{IP}}:{{PORT}}
 kbn-xsrf: true
