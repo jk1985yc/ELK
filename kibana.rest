@@ -17,9 +17,19 @@ Content-Type: application/json
   }
 }
 
+### Set Default Index
+POST /api/kibana/settings/defaultIndex HTTP/1.1
+Host: {{IP}}:{{PORT}}
+kbn-xsrf: true
+Content-Type: application/json
+
+{
+    "value": "{{ID_1}}"
+}'
+
 ### Delete Index Patterns
 @ID_2 = My-Patterns-*
 
-DELETE /api/saved_objects/index-pattern/{{ID}} HTTP/1.1
+DELETE /api/saved_objects/index-pattern/{{ID_2}} HTTP/1.1
 Host: {{IP}}:{{PORT}}
 kbn-xsrf: true
