@@ -14,7 +14,7 @@ then
     {
       "attributes": {
         "title": "'${ID}'"，
-        "timeFieldName" : "@timestamp"
+        "timeFieldName": "@timestamp"
       }
     }'
 
