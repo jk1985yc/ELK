@@ -5,6 +5,8 @@ IP=127.0.0.1
 PORT=5601
 ID=${TYPE_NAME}-`(date +%Y.%m)`.*
 
+
+### determine last day of each month
 if [ `date +%d -d tomorrow` = "01" ]
 then
 
