@@ -11,3 +11,8 @@ curl -X POST "${IP}:${PORT}/api/saved_objects/index-pattern/${ID}" -H 'kbn-xsrf:
     "title": "'${ID}'"
   }
 }'
+
+curl -X POST "${IP}:${PORT}/api/kibana/settings/defaultIndex" -H 'kbn-xsrf: true' -H 'Content-Type: application/json' -d'
+{
+    "value": "'${ID}'"
+}'
